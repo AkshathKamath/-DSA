@@ -1,1 +1,0 @@
-Learning and practicing DSA in C++.
