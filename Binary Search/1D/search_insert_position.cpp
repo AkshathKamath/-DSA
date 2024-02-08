@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int lowerBound(vector<int> &nums, int n, int k) // OR ca use lower_bound(vector.begin(),vector.end(),x)
+int lowerBound(vector<int> &nums, int n, int k) // OR ca use lower_bound(vector.begin(),vector.end(),x)-vector.begin()
 {
 
     int low = 0, high = n - 1;
