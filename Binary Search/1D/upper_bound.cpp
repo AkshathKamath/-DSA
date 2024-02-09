@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int upperBound(vector<int> &nums, int n, int k)
+int upperBound(vector<int> &nums, int n, int k) // Upper bound is the smallest index i such that arr[i]>x
 {
 
     int low = 0, high = n - 1;
