@@ -23,23 +23,18 @@ int allocateBooks(vector<int> &nums, int n, int students)
 
     int low = *max_element(nums.begin(), nums.end());
     int high = accumulate(nums.begin(), nums.end(), 0);
-    int ans = 1;
+    // int ans=1;
 
     while (low <= high)
     {
         int mid = (low + high) / 2;
-        if (studentsForPages(nums, n, mid) == students)
-        {
-            ans = mid;
-            high = mid - 1;
-        }
-        else if (studentsForPages(nums, n, mid) > students)
+        if (studentsForPages(nums, n, mid) > students)
             low = mid + 1;
         else
             high = mid - 1;
     }
 
-    return ans;
+    return low;
 }
 
 int main()
